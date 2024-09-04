@@ -21,3 +21,10 @@ class Library:
         for book in self.books:
             if not book.is_checked_out:
                 print(book.title)
+
+    def find_available_books(self) -> list:
+        books = []
+        for book in self.books:
+            if not book.is_checked_out:
+                books.append(book)
+        return books

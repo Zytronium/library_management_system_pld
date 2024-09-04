@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 from classes.book import Book
 
 class Member:
@@ -9,9 +10,9 @@ class Member:
     def borrow_book(self, book: Book):
         self.borrowed_books.append(book)
         book.is_checked_out = True
-        print(f"Borrowed book '{book.title}'")
+        print(f"{self.name} borrowed book '{book.title}'")
 
     def return_book(self, book: Book):
         self.borrowed_books.remove(book)
         book.is_checked_out = False
-        print(f"Returned book '{book.title}'")
+        print(f"{self.name} returned book '{book.title}'")
